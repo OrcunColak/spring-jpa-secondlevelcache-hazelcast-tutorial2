@@ -1,0 +1,1 @@
+This project demonstrates using Hibernate 2nd level cache as Hazelcast client  

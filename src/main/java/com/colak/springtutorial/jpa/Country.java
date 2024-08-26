@@ -1,6 +1,7 @@
 package com.colak.springtutorial.jpa;
 
 import jakarta.persistence.Cacheable;
+import jakarta.persistence.Convert;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
@@ -23,6 +24,6 @@ public class Country {
     @Id
     private Long id;
 
-    // @Convert(converter = MyConvertor.class)
+    @Convert(converter = MyConvertor.class)
     private String name;
 }

@@ -18,11 +18,11 @@ class CountryRepositoryTest {
 
     @Test
     void findAll() {
-        // This stored entries in cache
+        // This stores entries in cache
         List<Country> all = repository.findAll();
         assertThat(all).isNotEmpty();
 
-        // This does not execute an SQL, the data is fetched from cache
+        // The data is fetched from cache
         Optional<Country> byId = repository.findById(1L);
         assertThat(byId)
                 .isPresent();

@@ -5,8 +5,6 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import java.util.List;
-
 import static org.assertj.core.api.Assertions.assertThat;
 
 @SpringBootTest
@@ -17,12 +15,7 @@ class CountryRepository2Test {
 
     @Test
     void findById() {
-
-        // This stored entries in cache
-        List<Country> list = repository.findAll();
-        assertThat(list).isNotEmpty();
-
-        // This still executes SQL, the data is NOT fetched from cache. Why ?
+        // The data is stored in the cache
         Country byId = repository.findById(1L);
         assertThat(byId.getId()).isEqualTo(1L);
 

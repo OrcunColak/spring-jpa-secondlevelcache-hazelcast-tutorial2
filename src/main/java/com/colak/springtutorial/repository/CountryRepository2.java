@@ -22,7 +22,7 @@ public class CountryRepository2 {
         TypedQuery<Country> typedQuery = entityManager.createQuery(sql, Country.class);
 
         typedQuery.setHint(SpecHints.HINT_SPEC_CACHE_RETRIEVE_MODE, CacheRetrieveMode.USE);
-        typedQuery.setHint(SpecHints.HINT_SPEC_CACHE_STORE_MODE, CacheStoreMode.USE);
+        typedQuery.setHint(SpecHints.HINT_SPEC_CACHE_STORE_MODE, CacheStoreMode.REFRESH);
 
         return typedQuery.getResultList();
     }

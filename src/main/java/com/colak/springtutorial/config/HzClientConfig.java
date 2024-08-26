@@ -1,4 +1,4 @@
-package com.colak.springjpasecondlevelcachehazelcasttutorial.config;
+package com.colak.springtutorial.config;
 
 import com.hazelcast.client.config.ClientConfig;
 import org.springframework.context.annotation.Bean;

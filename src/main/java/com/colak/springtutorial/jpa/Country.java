@@ -1,16 +1,13 @@
-package com.colak.springjpasecondlevelcachehazelcasttutorial.jpa;
+package com.colak.springtutorial.jpa;
 
 import jakarta.persistence.Cacheable;
 import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import lombok.Getter;
 import lombok.Setter;
 import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
-
-import java.util.Objects;
 
 
 @Table(name = "countries")
@@ -26,6 +23,6 @@ public class Country {
     @Id
     private Long id;
 
+    // @Convert(converter = MyConvertor.class)
     private String name;
-
 }
